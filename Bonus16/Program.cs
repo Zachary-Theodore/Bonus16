@@ -11,7 +11,7 @@ namespace Bonus16
         static void Main(string[] args)
         {
             List<Car> cars = new List<Car>();
-
+            string[] header = { "Make", "Model", "Year", "Price" };
             while (true)
             {
                 Console.Clear();
@@ -29,16 +29,18 @@ namespace Bonus16
 
                 Console.WriteLine("Add another Vehicle?");
                 string choice = Console.ReadLine();
-                if (choice == "N")
+                if (choice == "N" || choice == "n")
                 {
                     break;
                 }
             }
-
+            Console.Clear();
+            Console.WriteLine($"{header[0], -10} {header[1], -10} {header[2], -10} {header[3], -10}");
+            Console.WriteLine("______________________________________________________");
             foreach (Car e in cars)
             {
-                Console.WriteLine($"{e.Make}, {e.Model}, {e.Year}, ${e.Price}");
-                Console.WriteLine("========================================");
+                Console.WriteLine($"{e.Make, -10} {e.Model, -10} {e.Year, -10} ${e.Price, -10}");
+                Console.WriteLine("==================================================");
             }
 
 
