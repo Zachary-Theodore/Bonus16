@@ -21,7 +21,7 @@ namespace Bonus16
                 Console.WriteLine("Please Provide a Model:");
                 temp.Model = (Console.ReadLine());
                 Console.WriteLine("Please Provide a Year:");
-                temp.Year = int.Parse(Console.ReadLine());
+                temp.Year = Console.ReadLine();
                 Console.WriteLine("Please Provide a Price:");
                 temp.Price = double.Parse(Console.ReadLine());
 

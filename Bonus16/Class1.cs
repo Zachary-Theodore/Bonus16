@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Bonus16
@@ -10,7 +11,7 @@ namespace Bonus16
     {
         private string make;
         private string model;
-        private int year;
+        private string year;
         private double price;
 
         public string Make
@@ -25,9 +26,21 @@ namespace Bonus16
             get { return model; }
         }
 
-        public int Year
+        public string Year
         {
-            set { year = value; }
+            set
+            {
+                if (!Regex.IsMatch(value, @"^[0-9]{4}$"))
+                {
+                    throw new Exception("Year Not a Valid Number Input");
+                }
+                else
+                {
+
+                    year = value;
+                }
+            }
+
             get { return year; }
         }
 
