@@ -37,7 +37,16 @@ namespace Bonus16
                 Console.WriteLine("Here is the informartion for this new car: ");
                 carList[userChoice - 1].PrintInfo();
                 Console.WriteLine("Would you like to buy this Vehicle?(Y/N)");
-
+            }
+            else if ( userChoice >3 && userChoice <=6)
+            {
+                Console.WriteLine("Here is the informartion for this used car: ");
+                carList[userChoice - 1].PrintInfo();
+                Console.WriteLine("Would you like to buy this Vehicle?(Y/N)");
+            }
+            else
+            {
+                throw new Exception("Error Messeage: You have entered an invalid input:");
             }
 
             
