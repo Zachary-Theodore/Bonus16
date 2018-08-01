@@ -49,5 +49,20 @@ namespace Bonus16
             set { price = value; }
             get { return price; }
         }
+
+
+
+        public Car(string mk, string md, string yr, double pr)
+        {
+            Make = mk;
+            Model = md;
+            Year = yr;
+            Price = pr;
+        }
+
+        public virtual void PrintInfo()
+        {
+            Console.WriteLine($"{Make} {Model} {Year} {Price}");
+        }
     }
 }
