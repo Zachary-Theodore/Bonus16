@@ -34,6 +34,9 @@ namespace Bonus16
             int userChoice = int.Parse(Console.ReadLine());
             if (userChoice >=1 && userChoice <=3 )
             {
+                Console.WriteLine("Here is the informartion for this new car: ");
+                carList[userChoice - 1].PrintInfo();
+                Console.WriteLine("Would you like to buy this Vehicle?(Y/N)");
 
             }
 
