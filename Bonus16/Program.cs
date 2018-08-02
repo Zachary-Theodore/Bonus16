@@ -8,8 +8,13 @@ namespace Bonus16
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Continue()
         {
+            Main();
+        }
+        static void Main()
+        {
+            
             Console.WriteLine("Choose a car from the list:(1-6)");
             Console.WriteLine();
             Car c1 = new Car("BMW", "325i", "2018", 45000);
@@ -37,12 +42,39 @@ namespace Bonus16
                 Console.WriteLine("Here is the informartion for this new car: ");
                 carList[userChoice - 1].PrintInfo();
                 Console.WriteLine("Would you like to buy this Vehicle?(Y/N)");
+                string buyChoice = Console.ReadLine();
+                if (buyChoice.ToLower() == "y")
+                {
+                    carList.Remove(carList[userChoice - 1]);
+                    foreach (Car c in carList)
+                    {
+                        Console.WriteLine($"{c.Make,-15}{c.Model,-15}{c.Year,-15}{c.Price,-15}");
+                    }
+
+                }
+                else
+                {
+                    Continue();
+                }
             }
             else if ( userChoice >3 && userChoice <=6)
             {
                 Console.WriteLine("Here is the informartion for this used car: ");
                 carList[userChoice - 1].PrintInfo();
                 Console.WriteLine("Would you like to buy this Vehicle?(Y/N)");
+                string buyChoice = Console.ReadLine();
+                if (buyChoice.ToLower() == "y")
+                {
+                    carList.Remove(carList[userChoice - 1]);
+                    foreach (Car c in carList)
+                    {
+                        Console.WriteLine($"{c.Make,-15}{c.Model,-15}{c.Year,-15}{c.Price,-15}");
+                    }
+                }
+                else
+                {
+                    Continue();
+                }
             }
             else
             {
