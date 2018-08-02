@@ -33,6 +33,7 @@ namespace Bonus16
             Console.WriteLine("____________________________________________________________");
             foreach (Car c in carList) 
             {
+                Console.WriteLine("-----------------------------------------------------");
                 Console.WriteLine($"{c.Make,-15}{c.Model,-15}{c.Year,-15}{c.Price,-15}");
             }
 
@@ -46,8 +47,11 @@ namespace Bonus16
                 if (buyChoice.ToLower() == "y")
                 {
                     carList.Remove(carList[userChoice - 1]);
+                        Console.WriteLine($"{header[0],-15}{header[1],-15}{header[2],-15}{header[3],-15}");
+                        Console.WriteLine("____________________________________________________________");
                     foreach (Car c in carList)
                     {
+                        Console.WriteLine("--------------------------------------------------");
                         Console.WriteLine($"{c.Make,-15}{c.Model,-15}{c.Year,-15}{c.Price,-15}");
                     }
 
@@ -66,8 +70,11 @@ namespace Bonus16
                 if (buyChoice.ToLower() == "y")
                 {
                     carList.Remove(carList[userChoice - 1]);
+                        Console.WriteLine($"{header[0],-15}{header[1],-15}{header[2],-15}{header[3],-15}");
+                        Console.WriteLine("____________________________________________________________");
                     foreach (Car c in carList)
                     {
+                        Console.WriteLine("---------------------------------------------------");
                         Console.WriteLine($"{c.Make,-15}{c.Model,-15}{c.Year,-15}{c.Price,-15}");
                     }
                 }
@@ -81,7 +88,7 @@ namespace Bonus16
                 throw new Exception("Error Messeage: You have entered an invalid input:");
             }
 
-            
+           // Continue();
 
             //while (true)
             //{
